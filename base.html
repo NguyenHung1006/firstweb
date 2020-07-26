@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style>
+        nav {
+            background-color: rgb(7, 7, 7);
+        }
+        .nav-link {
+            font-size: 103%;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .about span {
+            color: rgb(255, 0, 76);
+        }
+        .about i {
+            font-size: 85%;
+            color: rgb(29, 3, 44);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 1000;
+        }
+        .about img {
+            width: 230px;
+            opacity: 0.5;
+            border: 3px solid #010615;
+            transition: 0.3s;
+        }
+        .about img:hover {
+            border-left: 5px solid #310019;
+            border-bottom: 5px solid #310019;
+            border-top: 5px solid #0f002b;
+            border-right: 5px solid #0f002b;
+            opacity: 1;
+        }
+        .skill {
+            width: 100%;
+            max-width:  600px;
+            padding: 0 20px;
+            clear: both;
+        }
+        .skills {
+            padding-top: 75px;
+        }
+        .skills h2,#project h2 {
+            font-size: 450%;
+            z-index: -1;
+            opacity: 0.1;
+            letter-spacing: 3px;
+        }
+        .skills h2 {
+            float: right;            
+        }
+        .skill-name {
+            width: 20%;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 20px 0;
+            color: #010615;
+        }
+        .skill-name:hover {
+            border-bottom: 1px solid rgb(29, 4, 20);
+        }
+        .skill-bar {
+            height: 20px;
+            background-color: #00eeff;
+            border-radius: 8px;
+        }
+        .skill-per {
+            height: 20px;
+            border-radius: 8px;
+            background: linear-gradient(to left,#010615,#ff005e);
+            width: 0;
+            transition: 2s linear;
+            position: relative;
+        }
+        .skill-per::before {
+            content: attr(per);
+            position: absolute;
+            padding: 4px 6px;
+            background-color: #000;
+            color: #fff;
+            font-size: 12px;
+            border-radius: 4px;
+            top: -35px;
+            right: 0;
+            transform: translateX(50%);
+        }
+        .skill-per::after {
+            content: '';
+            position: absolute;
+            background-color: #000;
+            color: #fff;
+            width: 10px;
+            height: 10px;
+            border-radius: 4px;
+            top: -16px;
+            right: 0;
+            transform: translateX(50%) rotate(45deg);
+        }
+        .card {
+            width: 67%;
+            background-color: #010615;
+        }
+        .img {
+            max-width: 100%;
+            height: 570px;
+            background-image: url("./image/mac.png");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body id="top" class="bg-dark" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!--Header-->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <h4 style="font-size: 150%;" class="navbar-brand">NguyenHung</h4>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link active" href="#top">About</a>
+                    <a class="nav-item nav-link" href="#skills">Skills</a>
+                    <a class="nav-item nav-link" href="#project">Projects</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--About-->
+    <div class="about mb-5">
+        <div class="container">
+        <div class="row">
+            <div class="col-xl-9 col-md-8 text-light mt-5">
+                <h2>Hi,<br>I'm <span>Hung</span>,<br>Web Developer.<br>[ Back-end ]</h2>
+                <i>Bootstrap4 / Jquery / Django</i><br>
+                <a class="btn btn-outline-danger mt-5" href="https://www.facebook.com/nth2066">CONTACT ME</a>
+            </div>
+            <div class="col-xl-3 col-md-4 mt-5">
+                <img class="" src="./image/default.jpg">
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <div class="img"></div>
+
+    <!--Skills-->
+    <div id="skills" class="skills container mt-5 pb-5 text-white">
+        <h2>My Skills</h2>
+        <div class="skill">
+            <div class="skill-name">Bootstrap</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="85"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-name">Jquery</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="45"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-name">Django</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="70"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--Projects-->
+    <div id="project" class="container mt-5 pb-5 text-white">
+        <h2>Projects</h2>
+        <div class="row mt-3">
+            <div class="col-md-6 col-xs-12 d-flex justify-content-center pb-5">
+                <div class="card text-white">
+                  <img class="card-img-top" src="./image/background.png">
+                  <div class="card-body">
+                    <h4 class="card-title">First Project</h4>
+                    <a class="btn btn-primary" href="">View Demo</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12 d-flex justify-content-center pb-5">
+                <div class="card text-white">
+                    <img class="card-img-top" src="./image/background.png">
+                    <div class="card-body">
+                    <h4 class="card-title">Second Project</h4>
+                    <a class="btn btn-primary disabled" href="">Not Complete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $(".skill-per").each(function(){
+            var $this = $(this);
+            var per = $this.attr('per');
+            $this.css("width",per+'%');
+            $({animatedValue:0}).animate({animatedValue:per},{
+                duration:1200,
+                step:function (){
+                    $this.attr('per',Math.floor(this.animatedValue) + '%');
+                },
+                complete: function(){
+                    $this.attr('per',Math.floor(this.animatedValue) + '%');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

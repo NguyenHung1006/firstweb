@@ -1,0 +1,117 @@
+/* Header */
+nav {
+    background-color: rgb(7, 7, 7);
+}
+.nav-link {
+    font-size: 103%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* About */
+.about span {
+    color: rgb(255, 0, 76);
+}
+.about i {
+    font-size: 85%;
+    color: rgb(29, 3, 44);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 1000;
+}
+.about img {
+    width: 230px;
+    opacity: 0.5;
+    border: 3px solid #010615;
+    transition: 0.3s;
+}
+.about img:hover {
+    border-left: 5px solid #310019;
+    border-bottom: 5px solid #310019;
+    border-top: 5px solid #0f002b;
+    border-right: 5px solid #0f002b;
+    opacity: 1;
+}
+
+/* Banner */
+.banner {
+    max-width: 100%;
+    height: 570px;
+    background-image: url("https://scontent.xx.fbcdn.net/v/t1.15752-0/p280x280/109706738_330365251335978_3876375568801110351_n.png?_nc_cat=101&_nc_sid=b96e70&_nc_ohc=mS7L0iYxgbsAX9VnDCG&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=5475715867f97a8d2414346d960571e5&oe=5F44F408");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Skills */
+.skill {
+    width: 100%;
+    max-width:  600px;
+    padding: 0 20px;
+    clear: both;
+}
+.skills {
+    padding-top: 75px;
+}
+.skills h2, .project h2 {
+    font-size: 450%;
+    z-index: -1;
+    opacity: 0.1;
+    letter-spacing: 3px;
+}
+.skills h2 {
+    float: right;            
+}
+.skill-name {
+    width: 20%;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 20px 0;
+    color: #010615;
+}
+.skill-name:hover {
+    border-bottom: 1px solid rgb(29, 4, 20);
+}
+.skill-bar {
+    height: 20px;
+    background-color: #00eeff;
+    border-radius: 8px;
+}
+.skill-per {
+    height: 20px;
+    border-radius: 8px;
+    background: linear-gradient(to left,#010615,#ff005e);
+    width: 0;
+    transition: 2s linear;
+    position: relative;
+}
+.skill-per::before {
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+.skill-per::after {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 4px;
+    top: -16px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+}
+
+/* Project */
+.project .card {
+    width: 67%;
+    background-color: #010615;
+}
